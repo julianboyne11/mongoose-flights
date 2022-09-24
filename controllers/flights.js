@@ -32,7 +32,7 @@ function show(req, res) {
   Flight.findById(req.params.id)
   .then(flight => {
     res.render("flights/show", {
-      title: "Flight",
+      title: "Flight Detail",
       flight: flight
     })
   })

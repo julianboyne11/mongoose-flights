@@ -1,7 +1,19 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/flights/show.css" />
 <%- include('../partials/nav') %>
 
-<h1>Works</h1>
-
-<%- include("../partials/footer") %>
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Airline: </div>
+    <div><%= flight.airline %></div>
+    <div>Airport: </div>
+    <div><%= flight.airport %></div>
+    <div>Rating: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Departs: </div>
+    <div><%= flight.departs %></div>
+  </section>
+</main>
+  
+<%- include('../partials/footer') %>
