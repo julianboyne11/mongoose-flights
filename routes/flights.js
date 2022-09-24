@@ -6,6 +6,7 @@ const router = Router()
 /* GET users listing. */
 router.get("/", fligthsCtrl.index)
 router.get("/new", fligthsCtrl.new)
+router.get("/:id", fligthsCtrl.show)
 router.post("/", fligthsCtrl.create)
 
 export {

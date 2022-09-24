@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Movie List</h1>
+  <h1>Flights List</h1>
   <table>
     <thead>
       <tr>
@@ -11,6 +11,7 @@
         <th>Airport</th>
         <th>Flight Number</th>
         <th>Departure</th>
+        <th>Flight Details</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
           <td><%= flight.airport %></td>
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs %></td>
+          <td><a href="flights/<%= flight._id %>" title="Flight">Details</a></td>
         <% }) %>
     </tbody>
   </table>
