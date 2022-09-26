@@ -30,9 +30,29 @@
   <label for="seat-input">Seat:</label>
   <input type="text" name="seat">
   <label for="price-input">Price:</label>
-  <input type="text" value="$">
+  <input type="text" name="price">
   <button type="submit">Add Ticket</button>
 </form>
+<% if (flight.tickets.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Seat</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flight.tickets.forEach(ticket => { %>
+        <tr>
+          <td><%= ticket.seat %></td>
+          <td>$<%= ticket.price %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } else { %>
+  <h3>No Tickets Yet</h3>
+<% } %>
 </main>
   
 <%- include('../partials/footer') %>
