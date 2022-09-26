@@ -6,15 +6,33 @@
   <h1><%= title %></h1>
   <section>
     <div>Airline: </div>
-    <div><%= flight.airline %></div>
+    <div>
+      <%= flight.airline %>
+    <a href="/flights/<%= flight._id %>/edit" id="edit-flight">
+      <button>Edit Flight</button>
+    </a>
+  </div>
     <div>Airport: </div>
     <div><%= flight.airport %></div>
     <div>Rating: </div>
     <div><%= flight.flightNo %></div>
     <div>Departs: </div>
     <div><%= flight.departs %></div>
-    <a href="/flights/<%= flight._id %>/edit" id="edit-flight">Edit Flight</a>
+
   </section>
+</section>
+<h2>Tickets</h2>
+<form 
+  id="add-ticket-form"
+  action="/flights/<%= flight._id %>/tickets"
+  method="POST"
+>
+  <label for="seat-input">Seat:</label>
+  <input type="text" name="seat">
+  <label for="price-input">Price:</label>
+  <input type="text" value="$">
+  <button type="submit">Add Ticket</button>
+</form>
 </main>
   
 <%- include('../partials/footer') %>
