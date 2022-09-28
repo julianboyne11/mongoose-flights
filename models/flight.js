@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema
 
@@ -19,6 +20,7 @@ const flightSchema = new Schema({
   flightNo: {type: Number, match: /[1-9999]\d?/},
   departs: Date,
   tickets: [ticketSchema],
+  
 },{
   timestamps: true
 })

@@ -12,6 +12,7 @@ router.post("/", fligthsCtrl.create)
 router.post("/:id/tickets", fligthsCtrl.createTicket)
 router.delete("/:id", fligthsCtrl.delete)
 router.put("/:id", fligthsCtrl.update)
+router.delete("/:flightId/tickets/:ticketId", fligthsCtrl.deleteTicket)
 
 export {
   router
