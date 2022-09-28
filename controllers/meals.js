@@ -11,7 +11,6 @@ function newMeal(req, res) {
 }
 
 function create(req, res) {
-  console.log(req.body);
   Meal.create(req.body)
   .then(meal => {
     res.redirect("/meals/new")
